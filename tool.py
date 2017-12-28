@@ -26,7 +26,7 @@ def 分期实际利率(a=752.35,b=24,c=5.12,d=36.47):
         print(("第%d期实际贷款本金：%f，实际利率：%0.2f" %(i,a,f)))
         g+=f
     print("平均每期利率： %0.2f" %(g/b))
-
+    print("平均年利率： %0.2f" %(g/b*12))
 
 def 发送邮件(subject, text,to="1455234749@qq.com"):
     "send an email by QQ"
