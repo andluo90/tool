@@ -5,7 +5,7 @@ from email.header import Header
 from email.mime.text import MIMEText
 
 
-def rate(a=752.35,b=24,c=5.12,d=36.47):
+def 分期实际利率(a=752.35,b=24,c=5.12,d=36.47):
     """
     等额本息实际利率计算
     :param a: 贷款总额
@@ -23,10 +23,9 @@ def rate(a=752.35,b=24,c=5.12,d=36.47):
             a = a-(d-c)
             f = c/a*100
             e.append((a,f))
-        print(("第%d期实际贷款本金：%f，实际利率：%f" %(i,a,f)))
+        print(("第%d期实际贷款本金：%f，实际利率：%0.2f" %(i,a,f)))
         g+=f
-        if i in range(12,600,12):
-            print("【第%d年实际年利率：%f】" %(i/12,g))
+    print("平均每期利率： %0.2f" %(g/b))
 
 
 def 发送邮件(subject, text,to="1455234749@qq.com"):
