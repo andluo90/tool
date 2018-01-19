@@ -101,3 +101,21 @@ def 灯光模拟考试():
         a.remove(b)
     else:
         print('Over...')
+
+def 套现利率(a=40000,b=240,g=36):
+    """
+    a:信用卡刷卡金额
+    b:刷卡手续费
+    g:刷卡期数
+    """
+    a = 40000
+    b = 240
+    e = 0
+    for i in range(0,g):
+        d  = a - b*i
+        c = round(b*100/d,2)
+        e = e+c
+        print('第%d期实际利率:%0.2f,贷款金额:%0.2f' %(i+1,c,d))
+        if (i+1)/12 in range(1,31):
+            print('实际年利率为:%0.2f' %e)
+            e = 0
