@@ -122,15 +122,15 @@ def 套现利率(a=40000,b=240,g=36):
 def 执行脚本():
     "执行 server 2005 SQL脚本语句"
     import pyodbc
-    IP = "10.142.141.15"
-    DBNAME = "CITAS_Plus_CN_SIT"
-    UID = "CITAS"
-    PWD = "Mm123456."
+    IP = "192.168.0.1"
+    DBNAME = "TEST"
+    UID = "TEST"
+    PWD = "TEST"
     try:
         conn = pyodbc.connect('DRIVER={SQL Server Native Client 10.0};SERVER='+IP+';DATABASE='+DBNAME+';UID='+UID+';PWD='+PWD+'')
         cursor = conn.cursor()
         
-        sql = "select top 2 * from prospect"
+        sql = "select top 2 * from test"
         cursor.execute(sql)
         for row in cursor:
             print(row)
